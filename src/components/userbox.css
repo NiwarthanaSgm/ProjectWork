@@ -1,0 +1,24 @@
+.bar{
+    flex: 1;
+    background-color: rgb(251, 251, 255);
+    position: sticky;
+    top: 50px;
+    padding-left: 10px;
+}
+
+.prof{
+    display:flex;
+    cursor: pointer;
+    width:100%;
+}
+
+.menu{
+    display:list-item;
+    border-radius: 10px;
+    background-color: inherit;
+    padding-left: 5px;
+}
+.menuItem:hover{
+    background-color: rgb(175, 175, 201);
+    border-radius: 10px;
+}
