@@ -1,7 +1,7 @@
 import React from "react";
 import { NotificationsNone, Language, Settings } from '@mui/icons-material';
 import Tooltip from '@mui/material/Tooltip';
-import ProfileIcon from './ProfileIcon';
+import IconMenu from './IconMenu';
 import "./navbar.css";
 
 export default function Navbar() {
@@ -22,7 +22,7 @@ export default function Navbar() {
           <div className="topbarIconContainer">
             <Tooltip title='Settings'><Settings /></Tooltip>
           </div>
-          <ProfileIcon/>
+          <IconMenu/>
         </div>
       </div>
     </div>

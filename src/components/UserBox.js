@@ -1,20 +1,22 @@
 import React from 'react';
-import { Avatar } from '@mui/material';
+import {Link} from 'react-router-dom';
+import { Avatar, Button } from '@mui/material';
 import {Typography} from '@mui/material';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import {Box} from '@mui/material';
+import AddCircleIcon from '@mui/icons-material/AddCircle';
 import "./userbox.css";
 
 
 function getFiveStars() {
-  return 150;
+  return 100;
 }
 function getFourStars() {
-    return 100;
+    return 80;
 }
 function getThreeStars() {
-    return 45;
+    return 35;
 }
 function getTwoStars() {
     return 20;
@@ -27,7 +29,7 @@ export default function UserBox() {
   const name= "ABCD";
   return ( 
     <><div className='bar'><div className='prof'>
-        <Avatar alt={name} src="https://images.app.goo.gl/W3A7SgmNs2M3m2oy9" sx={{ width: 70, height: 70}}/>
+        <Link to="/profile"><Avatar alt={name} src="https://images.app.goo.gl/W3A7SgmNs2M3m2oy9" sx={{ width: 70, height: 70}}/></Link>
         <Typography style={{variant: 'primary', paddingLeft: '20px', paddingTop: '20px', color: 'black'}}>{name}</Typography>
       </div>
       <div className='menu'>
@@ -49,7 +51,7 @@ export default function UserBox() {
           </ListItem>
         </List> 
         </div>
-        <div>
+        <div className='rates'>
          <Box
             sx={{
               width: 'auto',
@@ -74,6 +76,7 @@ export default function UserBox() {
              1 <Box width={getOneStars()} sx={{height: 20, backgroundColor: 'red', border:'2px',marginLeft:2, marginRight:2 }}/>
            </Typography><Typography sx={{display:'inline-flex', justifyContent:'space-between', alignItems:'right'}}>(1)</Typography>
          </Box>
+         <Link to="/create Gig"><Button><AddCircleIcon/>Add Gig</Button></Link>
         </div>
     </div></>
   )

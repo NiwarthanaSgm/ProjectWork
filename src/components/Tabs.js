@@ -14,9 +14,9 @@ export default function LabTabs() {
   };
 
   return (
-    <Box sx={{ width: 'auto', height: '100%', typography: 'body1', flex:1, backgroundColor:'inherit'}}>
-      <TabContext value={value}>
-        <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+    <Box sx={{ width: 'auto', height: '100%', typography: 'body1', flex:1, backgroundColor:'inherit', minHeight:500, maxWidth:850}}>
+      <TabContext value={value} sx={{width:'auto'}}>
+        <Box sx={{ borderBottom: 1, borderColor: 'divider', width:'auto'}}>
           <TabList onChange={handleChange} aria-label="Dashboard Tab">
             <Tab label="Schedule" value="1" />
             <Tab label="Reschedule" value="2" />
