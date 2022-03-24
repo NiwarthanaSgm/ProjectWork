@@ -4,6 +4,7 @@
     position: sticky;
     top: 50px;
     padding-left: 10px;
+    max-width: 25%;
 }
 
 .prof{
@@ -21,4 +22,8 @@
 .menuItem:hover{
     background-color: rgb(175, 175, 201);
     border-radius: 10px;
+}
+
+rates{
+    max-width: 20%;
 }

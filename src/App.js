@@ -1,19 +1,24 @@
-import React from 'react';
 import "./App.css";
 import Navbar from './components/Navbar';
-import UserBox from './components/UserBox';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from './Pages/Home';
-
+import Profile from "./components/Profile";
+import CreateGig from "./components/CreateGig";
 
 function App() {
   return (
-    <><div><Navbar/></div>
-      <div className=' app'>
-        <UserBox/>
-        <Home/>
-      </div>
+    <>
+    <Router>
+    <div><Navbar/></div>
+        <div className="content">
+        <Switch>
+          <Route exact path="/"><Home/></Route>
+          <Route path="/profile"><Profile/></Route>
+          <Route path="/create Gig"><CreateGig/></Route>
+        </Switch></div>
+    </Router> 
     </>
-  )
+  );
 }
 
 export default App;

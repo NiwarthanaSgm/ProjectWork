@@ -21,7 +21,7 @@ const rows = [
 
 export default function DataTable() {
   return (
-    <div style={{ height: 400, width: 'auto', alignItems:'center'}}>
+    <div style={{ height: 375, width: 'auto', alignItems:'center'}}>
       <DataGrid
         rows={rows}
         columns={columns}
