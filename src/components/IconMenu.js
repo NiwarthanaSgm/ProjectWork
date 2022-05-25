@@ -3,7 +3,7 @@ import IconButton from '@mui/material/IconButton';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Avatar from '@mui/material/Avatar';
-import { Link } from 'react-router-dom';
+import Button from '@mui/material/Button'
 
 export default function BasicMenu() {
   const name="ABCD";
@@ -36,9 +36,9 @@ export default function BasicMenu() {
           'aria-labelledby': 'basic-button',
         }}
       >
-        <Link to="/profile"><MenuItem onClick={handleClose}>Profile</MenuItem></Link>
-        <Link to="/"><MenuItem onClick={handleClose}>Dashboard</MenuItem></Link>
-        <Link to="/Home"><MenuItem onClick={handleClose}>Logout</MenuItem></Link>
+        <Button href="/profile"><MenuItem onClick={handleClose}>Profile</MenuItem></Button><br/>
+        <Button href="/dashboard"><MenuItem onClick={handleClose}>Dashboard</MenuItem></Button><br/>
+        <Button href="/Home"><MenuItem onClick={handleClose}>Logout</MenuItem></Button>
       </Menu>
     </div>
   );

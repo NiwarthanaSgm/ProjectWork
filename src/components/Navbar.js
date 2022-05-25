@@ -9,7 +9,7 @@ export default function Navbar() {
     <div className="topbar">
       <div className="topbarWrapper">
         <div className="topLeft">
-          <span className="logo">Dashboard</span>
+          <span className="logo">Doodus</span>
         </div>
         <div className="topRight">
           <div className="topbarIconContainer">
