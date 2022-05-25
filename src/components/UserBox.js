@@ -1,5 +1,4 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
 import { Avatar, Button } from '@mui/material';
 import {Typography} from '@mui/material';
 import List from '@mui/material/List';
@@ -25,11 +24,19 @@ function getOneStars() {
     return 10;
 }
 
+var styleAdded ={
+  text:{
+    border:'2px', marginLeft:2, marginRight:2, height: 20
+  },count:{
+    display:'inline-flex', justifyContent:'space-between', alignItems:'right'
+  }
+}
+
 export default function UserBox() {
   const name= "ABCD";
   return ( 
     <><div className='bar'><div className='prof'>
-        <Link to="/profile"><Avatar alt={name} src="https://images.app.goo.gl/W3A7SgmNs2M3m2oy9" sx={{ width: 70, height: 70}}/></Link>
+        <Button href="/profile"><Avatar alt={name} src="https://images.app.goo.gl/W3A7SgmNs2M3m2oy9" sx={{ width: 70, height: 70}}/></Button>
         <Typography style={{variant: 'primary', paddingLeft: '20px', paddingTop: '20px', color: 'black'}}>{name}</Typography>
       </div>
       <div className='menu'>
@@ -56,27 +63,27 @@ export default function UserBox() {
             sx={{
               width: 'auto',
               height: 'auto',
-              backgroundColor: 'smokewhite',
+              backgroundColor: 'SmokeWhite',
             }}
          >
            <Typography variant='subtitle1' marginTop={5}>Ratings:</Typography>
            <Typography sx={{display:'inline-flex'}}>
-             5 <Box width={getFiveStars()} sx={{height: 20, backgroundColor: 'yellow', border:'2px', marginLeft:2, marginRight:2 }}/>
-           </Typography><Typography sx={{display:'inline-flex', justifyContent:'space-between', alignItems:'right'}}>(1)</Typography><br/>
+             5 <Box width={getFiveStars()} sx={{ backgroundColor: 'yellow' }} style={styleAdded.text}/>
+           </Typography><Typography style={styleAdded.count}>(1)</Typography><br/>
            <Typography sx={{display:'inline-flex'}}>
-             4 <Box width={getFourStars()} sx={{height: 20, backgroundColor: 'blue', border:'2px',marginLeft:2, marginRight:2 }}/>
-           </Typography><Typography sx={{display:'inline-flex', justifyContent:'space-between', alignItems:'right'}}>(1)</Typography><br/>
+             4 <Box width={getFourStars()} sx={{backgroundColor: 'blue'}} style={styleAdded.text}/>
+           </Typography><Typography style={styleAdded.count}>(1)</Typography><br/>
            <Typography sx={{display:'inline-flex'}}>
-             3 <Box width={getThreeStars()} sx={{height: 20, backgroundColor: 'green', border:'2px',marginLeft:2, marginRight:2 }}/>
-           </Typography><Typography sx={{display:'inline-flex', justifyContent:'space-between', alignItems:'right'}}>(1)</Typography><br/>
+             3 <Box width={getThreeStars()} sx={{backgroundColor: 'green'}} style={styleAdded.text}/>
+           </Typography><Typography style={styleAdded.count}>(1)</Typography><br/>
            <Typography sx={{display:'inline-flex'}}>
-             2 <Box width={getTwoStars()} sx={{height: 20, backgroundColor: 'violet', border:'2px',marginLeft:2, marginRight:2 }}/>
-           </Typography><Typography sx={{display:'inline-flex', justifyContent:'space-between', alignItems:'right'}}>(1)</Typography><br/>
+             2 <Box width={getTwoStars()} sx={{backgroundColor: 'violet'}} style={styleAdded.text}/>
+           </Typography><Typography style={styleAdded.count}>(1)</Typography><br/>
            <Typography sx={{display:'inline-flex'}}>
-             1 <Box width={getOneStars()} sx={{height: 20, backgroundColor: 'red', border:'2px',marginLeft:2, marginRight:2 }}/>
-           </Typography><Typography sx={{display:'inline-flex', justifyContent:'space-between', alignItems:'right'}}>(1)</Typography>
+             1 <Box width={getOneStars()} sx={{backgroundColor: 'red'}} style={styleAdded.text}/>
+           </Typography><Typography style={styleAdded.count}>(1)</Typography>
          </Box>
-         <Link to="/create Gig"><Button><AddCircleIcon/>Add Gig</Button></Link>
+         <Button href="/create Gig"><AddCircleIcon/>Add Gig</Button>
         </div>
     </div></>
   )

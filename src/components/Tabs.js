@@ -6,6 +6,16 @@ import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
 import ScheduleData from './ScheduleData';
 
+var styleAdded = {
+  box:{
+    width: 'auto', height: '100%', typography: 'body1', flex:1, backgroundColor:'inherit', minHeight:450, maxWidth:850
+  }, tab:{
+    width:'auto'
+  }, box1:{
+    borderBottom: 1, borderColor: 'divider', width:'auto'
+  }
+}
+
 export default function LabTabs() {
   const [value, setValue] = React.useState('1');
 
@@ -14,9 +24,9 @@ export default function LabTabs() {
   };
 
   return (
-    <Box sx={{ width: 'auto', height: '100%', typography: 'body1', flex:1, backgroundColor:'inherit', minHeight:500, maxWidth:850}}>
-      <TabContext value={value} sx={{width:'auto'}}>
-        <Box sx={{ borderBottom: 1, borderColor: 'divider', width:'auto'}}>
+    <Box style={styleAdded.box}>
+      <TabContext value={value} sx={styleAdded.tab}>
+        <Box styles={styleAdded.box1}>
           <TabList onChange={handleChange} aria-label="Dashboard Tab">
             <Tab label="Schedule" value="1" />
             <Tab label="Reschedule" value="2" />

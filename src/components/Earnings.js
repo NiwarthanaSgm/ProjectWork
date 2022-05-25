@@ -5,6 +5,15 @@ import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import "./Earnings.css";
 
+var styleAdded ={
+  card:{
+    width: '200px', margin:'5px'
+  },title:{
+    fontSize: 14 , textAlign:'center',color:'blueviolet'
+  },description:{
+    mb: 1.5,textAlign:'center'
+  }
+}
 
 function getMonthly(){
     return 100;
@@ -23,12 +32,12 @@ function receivables(){
 }
 export default function BasicCard() {
   return (
-    <><div className='cards'><Card sx={{ width: '200px', margin:'5px'}}>
+    <><div className='cards'><Card style={styleAdded.card}>
       <CardContent>
-        <Typography sx={{ fontSize: 14 , textAlign:'center',color:'blueviolet'}} color="text.secondary" gutterBottom>
+        <Typography style={styleAdded.title} color="text.secondary" gutterBottom>
           This Month Earns
         </Typography>
-        <Typography sx={{ mb: 1.5 , textAlign:'center'}} color="text.secondary">
+        <Typography style={styleAdded.description} color="text.secondary">
           $ {getMonthly()}
         </Typography>
       </CardContent>
@@ -37,10 +46,10 @@ export default function BasicCard() {
     </Card>
     <Card sx={{ width: '200px', margin:'5px'}}>
       <CardContent>
-        <Typography sx={{ fontSize: 14 ,textAlign:'center',color:'blueviolet'}} color="text.secondary" gutterBottom>
+        <Typography style={styleAdded.title} color="text.secondary" gutterBottom>
           This week Earns
         </Typography>
-        <Typography sx={{ mb: 1.5,textAlign:'center' }} color="text.secondary">
+        <Typography style={styleAdded.description} color="text.secondary">
           $ {getWeekly()}
         </Typography>
       </CardContent>
@@ -49,10 +58,10 @@ export default function BasicCard() {
     </Card>
     <Card sx={{ width: '200px', margin:'5px'}}>
       <CardContent>
-        <Typography sx={{ fontSize: 14 ,textAlign:'center',color:'blueviolet'}} color="text.secondary" gutterBottom>
+        <Typography style={styleAdded.title} color="text.secondary" gutterBottom>
           Total Earns
         </Typography>
-        <Typography sx={{ mb: 1.5,textAlign:'center' }} color="text.secondary">
+        <Typography style={styleAdded.description} color="text.secondary">
           $ {getTotal()}
         </Typography>
       </CardContent>
@@ -61,10 +70,10 @@ export default function BasicCard() {
     </Card>
     <Card sx={{ width: '200px', margin:'5px'}}>
       <CardContent>
-        <Typography sx={{ fontSize: 14,textAlign:'center' ,color:'blueviolet'}} color="text.secondary" gutterBottom>
+        <Typography style={styleAdded.title} color="text.secondary" gutterBottom>
           Withdrawals
         </Typography>
-        <Typography sx={{ mb: 1.5 ,textAlign:'center'}} color="text.secondary">
+        <Typography style={styleAdded.description} color="text.secondary">
           $ {withdrawal()}
         </Typography>
       </CardContent>
@@ -73,10 +82,10 @@ export default function BasicCard() {
     </Card>
     <Card sx={{ width: '200px', margin:'5px'}}>
       <CardContent>
-        <Typography sx={{ fontSize: 14,textAlign:'center' ,color:'blueviolet'}} color="text.secondary" gutterBottom>
+        <Typography style={styleAdded.title} color="text.secondary" gutterBottom>
           Receivable Withdrawals
         </Typography>
-        <Typography sx={{ mb: 1.5,textAlign:'center' }} color="text.secondary">
+        <Typography style={styleAdded.description} color="text.secondary">
           $ {receivables()}
         </Typography>
       </CardContent>
