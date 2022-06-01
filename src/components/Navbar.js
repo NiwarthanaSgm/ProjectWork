@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 import { NotificationsNone, Language, Settings } from '@mui/icons-material';
 import Tooltip from '@mui/material/Tooltip';
 import IconMenu from './IconMenu';
-import "./navbar.css";
+import './navbar.css';
 
 export default function Navbar() {
   return (

@@ -3,10 +3,11 @@ import IconButton from '@mui/material/IconButton';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button'
+import Button from '@mui/material/Button';
+import Divider from '@mui/material/Divider';
 
 export default function BasicMenu() {
-  const name="ABCD";
+  const name= 'ABCD';
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -36,9 +37,11 @@ export default function BasicMenu() {
           'aria-labelledby': 'basic-button',
         }}
       >
-        <Button href="/profile"><MenuItem onClick={handleClose}>Profile</MenuItem></Button><br/>
-        <Button href="/dashboard"><MenuItem onClick={handleClose}>Dashboard</MenuItem></Button><br/>
-        <Button href="/Home"><MenuItem onClick={handleClose}>Logout</MenuItem></Button>
+        <div style={{textAlign:'center'}}>
+          <Button href="/profile"><MenuItem onClick={handleClose}>Profile</MenuItem></Button><Divider/>
+          <Button href="/dashboard"><MenuItem onClick={handleClose}>Dashboard</MenuItem></Button><Divider/>
+          <Button href="/Home"><MenuItem onClick={handleClose}>Logout</MenuItem></Button>
+        </div>
       </Menu>
     </div>
   );

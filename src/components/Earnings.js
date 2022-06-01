@@ -3,32 +3,32 @@ import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
-import "./Earnings.css";
+import './Earnings.css';
 
-var styleAdded ={
+const styleAdded ={
   card:{
-    width: '200px', margin:'5px'
-  },title:{
-    fontSize: 14 , textAlign:'center',color:'blueviolet'
-  },description:{
-    mb: 1.5,textAlign:'center'
-  }
-}
+    width: '200px', margin:'5px',
+  }, title:{
+    fontSize: 14, textAlign:'center', color:'blueviolet',
+  }, description:{
+    mb: 1.5, textAlign:'center',
+  },
+};
 
 function getMonthly(){
-    return 100;
-};
+  return 100;
+}
 function getWeekly(){
-    return 45;
-};
+  return 45;
+}
 function getTotal(){
-    return 350;
+  return 350;
 }
 function withdrawal(){
-    return 200;
-};
+  return 200;
+}
 function receivables(){
-    return getTotal()-withdrawal();
+  return getTotal()-withdrawal();
 }
 export default function BasicCard() {
   return (
@@ -92,6 +92,6 @@ export default function BasicCard() {
       <CardActions>
       </CardActions>
     </Card></div>
-   </>
+    </>
   );
 }

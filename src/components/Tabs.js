@@ -6,15 +6,15 @@ import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
 import ScheduleData from './ScheduleData';
 
-var styleAdded = {
+const styleAdded = {
   box:{
-    width: 'auto', height: '100%', typography: 'body1', flex:1, backgroundColor:'inherit', minHeight:450, maxWidth:850
+    width: 'auto', height: '100%', typography: 'body1', flex:1, backgroundColor:'inherit', minHeight:450, maxWidth:850,
   }, tab:{
-    width:'auto'
+    width:'auto',
   }, box1:{
-    borderBottom: 1, borderColor: 'divider', width:'auto'
-  }
-}
+    borderBottom: 1, borderColor: 'divider', width:'auto',
+  },
+};
 
 export default function LabTabs() {
   const [value, setValue] = React.useState('1');
