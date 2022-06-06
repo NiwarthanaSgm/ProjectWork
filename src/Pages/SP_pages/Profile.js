@@ -1,6 +1,6 @@
 import React from 'react';
-import Navbar from '../../components/SP-dashboard-component/Navbar';
-import ProfileDetails from '../../components/SP-dashboard-component/ProfileDetails'
+import Navbar from '../../components/SP_DashboardComponent/Navbar';
+import ProfileDetails from '../../components/SP_DashboardComponent/ProfileDetails'
 
 export default function Profile() {
   return (

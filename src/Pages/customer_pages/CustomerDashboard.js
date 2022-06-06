@@ -1,9 +1,9 @@
 import React from 'react';
-import UserBox from '../../components/SP-dashboard-component/UserBox';
-import Tabs from '../../components/SP-dashboard-component/Tabs';
-import Earnings from '../../components/SP-dashboard-component/Earnings';
+import Tabs from '../../components/customerDashComponent/Tabs';
 import '../../styles/dashboard.css';
-import Navbar from '../../components/SP-dashboard-component/Navbar';
+import Navbar from '../../components/customerDashComponent/Navbar';
+import PaymentDetails from '../../components/customerDashComponent/Payments';
+import UserBox from '../../components/customerDashComponent/UserBox';
 
 export default function Home() {
   return (
@@ -14,7 +14,7 @@ export default function Home() {
           <UserBox/>
           <div className='col2'>
             <Tabs/>
-            <Earnings/>
+            <PaymentDetails/>
           </div>
         </div>
       </div>

@@ -1,12 +1,12 @@
-import './styles/app.css';
+import './app.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import SPdash from './Pages/SP-pages/SP-Dashboard';
-import Profile from './Pages/SP-pages/Profile';
-import FullProfile from './Pages/SP-pages/SP-FullProfile';
+import SPdash from './Pages/SP_pages/SPDashboard';
+import Profile from './Pages/SP_pages/Profile';
+import FullProfile from './Pages/SP_pages/SPFullProfile';
 import Home from './Pages/Home';
-import CustomerDashboard from './Pages/customer-pages/Customer-Dashboard';
-import CustomerEditProfile from './Pages/customer-pages/Cus-FullProfile';
-import CustomerProfile from './Pages/customer-pages/CustomerProfile';
+import CustomerDashboard from './Pages/customer_pages/CustomerDashboard';
+import CustomerEditProfile from './Pages/customer_pages/CusFullProfile';
+import CustomerProfile from './Pages/customer_pages/CustomerProfile';
 
 function App() {
   return (

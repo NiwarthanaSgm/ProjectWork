@@ -1,6 +1,6 @@
 import React from 'react';
-import Navbar from '../../components/customer-dash-component/Navbar';
-import ProfileDetails from '../../components/customer-dash-component/ProfileDetails'
+import Navbar from '../../components/customerDashComponent/Navbar';
+import ProfileDetails from '../../components/customerDashComponent/ProfileDetails'
 
 export default function Profile() {
   return (

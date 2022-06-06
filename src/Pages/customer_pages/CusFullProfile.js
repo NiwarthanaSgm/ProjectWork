@@ -1,7 +1,7 @@
 import React from 'react';
-import Navbar from '../../components/customer-dash-component/Navbar';
-import ProfileDetails from '../../components/customer-dash-component/ProfileDetails';
-import EditProfile from '../../services/customer-services/EditProfile-customer';
+import Navbar from '../../components/customerDashComponent/Navbar';
+import ProfileDetails from '../../components/customerDashComponent/ProfileDetails';
+import EditProfile from '../../services/customer_services/EditProfileCustomer';
 
 export default function Profile() {
   return (
