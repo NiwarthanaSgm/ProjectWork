@@ -38,7 +38,7 @@ export default function BasicMenu() {
         }}
       >
         <div style={{textAlign:'center'}}>
-          <Button href="/profile"><MenuItem onClick={handleClose}>Profile</MenuItem></Button><Divider/>
+          <Button href="/customer/profile"><MenuItem onClick={handleClose}>Profile</MenuItem></Button><Divider/>
           <Button href="/dashboard/customer"><MenuItem onClick={handleClose}>Dashboard</MenuItem></Button><Divider/>
           <Button href="/home"><MenuItem onClick={handleClose}>Logout</MenuItem></Button>
         </div>

@@ -47,7 +47,7 @@ export default function Profile() {
             <Typography style={{fontSize:'25px', variant: 'secondary', paddingLeft: '20px', color:'ButtonText'}}>{position}</Typography>
           </div>
         </div>
-        <Button style={{ margin:'10% 20% 5% 20%', textAlign:'center', minWidth:'250px'}} variant='outlined' color="success" href="/EditProfile">Edit Profile</Button>
+        <Button style={{ margin:'10% 20% 5% 20%', textAlign:'center', minWidth:'250px'}} variant='outlined' color="success" href="/serviceprovider/EditProfile">Edit Profile</Button>
         <div>
           <br/><hr/>
           <h3 style={styleAdded.headings}>Personal</h3>
