@@ -1,5 +1,6 @@
 import React from 'react';
-import { NotificationsNone, Language, Settings } from '@mui/icons-material';
+import { Link } from 'react-router-dom';
+import { NotificationsNone, Language, Settings, Home } from '@mui/icons-material';
 import Tooltip from '@mui/material/Tooltip';
 import IconMenu from './IconMenu';
 import '../../styles/navbar.css';
@@ -13,6 +14,9 @@ export default function Navbar() {
         </div>
         <div className="topRight">
           <span className='type'>As a Client</span>
+          <div className="topbarIconContainer">
+            <Link to={"/home"}><Tooltip title='Home'><Home/></Tooltip></Link>
+          </div>
           <div className="topbarIconContainer">
             <Tooltip title='Notifications'><NotificationsNone /></Tooltip>
             <span className="topIconBadge">2</span>
