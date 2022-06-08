@@ -1,18 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import IconButton from '@mui/material/IconButton';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
-import Divider from '@mui/material/Divider';
+import { useHistory } from 'react-router-dom';
 
 export default function BasicMenu() {
-  const name= 'ABCD';
-  const [anchorEl, setAnchorEl] = React.useState(null);
+  const name = 'ABCD';
+  const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
+
+  const history = useHistory();
+  const handleMenuRoutes = (path) => {
+    history.push(path);
+    setAnchorEl(null);
+  };
+
   const handleClose = () => {
     setAnchorEl(null);
   };
@@ -37,11 +43,9 @@ export default function BasicMenu() {
           'aria-labelledby': 'basic-button',
         }}
       >
-        <div style={{textAlign:'center'}}>
-          <Button href="/serviceprovider/profile"><MenuItem onClick={handleClose}>Profile</MenuItem></Button><Divider/>
-          <Button href="/dashboard/serviceprovider"><MenuItem onClick={handleClose}>Dashboard</MenuItem></Button><Divider/>
-          <Button href="/home"><MenuItem onClick={handleClose}>Logout</MenuItem></Button>
-        </div>
+        <MenuItem onClick={() => handleMenuRoutes('/serviceprovider/profile')}>Profile</MenuItem>
+        <MenuItem onClick={() => handleMenuRoutes('/dashboard/serviceprovider')}>Dashboard</MenuItem>
+        <MenuItem onClick={() => handleMenuRoutes('/')}>LogOut</MenuItem>
       </Menu>
     </div>
   );

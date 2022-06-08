@@ -16,7 +16,7 @@ function App() {
         {/* <div><Navbar/></div> */}
         <div className="content">
           <Switch>
-            <Route exact path="/home"><Home/></Route>
+            <Route exact path="/"><Home/></Route>
             <Route path="/dashboard/serviceprovider"><SPdash/></Route>
             <Route path="/serviceprovider/profile"><Profile/></Route>
             <Route path="/serviceprovider/EditProfile"><FullProfile/></Route>
