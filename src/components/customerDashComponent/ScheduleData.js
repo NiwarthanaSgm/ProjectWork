@@ -11,6 +11,7 @@ export default function schedulesTable() {
     { field: 'Duration', headerName:'Duration', width: 180 },
   ];
 
+  
   return (
     <div style={{ height: 375, width: 'auto', alignItems:'center'}}>
       <DataGrid

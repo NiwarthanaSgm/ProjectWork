@@ -5,6 +5,7 @@ import Navbar from '../../components/customerDashComponent/Navbar';
 import PaymentDetails from '../../components/customerDashComponent/Payments';
 import UserBox from '../../components/customerDashComponent/UserBox';
 
+
 export default function Home() {
   return (
     <>

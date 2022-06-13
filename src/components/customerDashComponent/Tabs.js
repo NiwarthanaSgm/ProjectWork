@@ -17,6 +17,7 @@ const styleAdded = {
 };
 
 export default function LabTabs() {
+  
   const [value, setValue] = React.useState('1');
 
   const handleChange = (event, newValue) => {

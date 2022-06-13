@@ -13,6 +13,7 @@ export default function EditProfile() {
   const [open, setOpen] = useState(false);
   const [show, setLink] = useState(false);
 
+  
   // Edited details're sent to database
   // const [prflPic, setprflPic] = useState("");
   // const [firstname, setfirstname] = useState("");

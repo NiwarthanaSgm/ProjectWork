@@ -1,17 +1,26 @@
-import React from 'react';
-import {Box,Avatar,Divider,TextField} from "@mui/material";
+import React, {useState} from 'react';
+import { Box, Avatar, Divider, TextField, Button } from "@mui/material";
 import {Edit} from "@mui/icons-material";
-
+import Axios from 'axios';
 
 export default function EditProfile() {
   
   // Edited details're sent to database
   // const [prflPic, setprflPic] = useState("");
-  // const [firstname, setfirstname] = useState("");
-  // const [lastname, setLastname] = useState("");
+  const [firstname, setfirstname] = useState("");
+  const [lastname, setLastname] = useState("");
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  // };
+
+  const editDetails = () => {
+    Axios.post('http://localhost:3002/create', {
+      cname : firstname, 
+      Adname : lastname
+    }).then(() => {
+      console.log("success");
+    });
   };
 
   return (
@@ -30,7 +39,7 @@ export default function EditProfile() {
       >
         <div style={{ width: "100%", padding: "0px 10px 10px 10px" }}>
           <h2>Change Your Details</h2>
-          <form onSubmit={handleSubmit}>
+          <form>
             <label htmlFor="image" style={{ display: "inline-flex" }}>
               <Avatar
                 alt="ABCD"
@@ -46,12 +55,18 @@ export default function EditProfile() {
               label="First Name"
               defaultValue="ABCD"
               variant="standard"
+              onChange={(event) => {
+                setfirstname(event.target.value);
+              }}
             />
             <TextField
               id="standard-required"
               label="Last Name"
               defaultValue="EFGH"
               variant="standard"
+              onChange={(event) => {
+                setLastname(event.target.value);
+              }}
             />
             <TextField
               disabled
@@ -68,13 +83,14 @@ export default function EditProfile() {
               variant="standard"
             />
             <br />
-              <input
+              {/* <input
                 type="submit"
                 color="success"
                 size="large"
                 name="Save"
                 label="Save"
-              />
+              /> */}
+              <Button onClick={editDetails}>Update</Button>
           </form>
         </div>  
       </Box>

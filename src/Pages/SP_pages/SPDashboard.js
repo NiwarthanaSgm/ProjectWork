@@ -5,6 +5,7 @@ import Earnings from '../../components/SP_DashboardComponent/Earnings';
 import '../../styles/dashboard.css';
 import Navbar from '../../components/SP_DashboardComponent/Navbar';
 
+
 export default function Home() {
   return (
     <>

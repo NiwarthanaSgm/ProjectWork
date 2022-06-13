@@ -3,6 +3,7 @@ import Navbar from '../../components/customerDashComponent/Navbar';
 import ProfileDetails from '../../components/customerDashComponent/ProfileDetails';
 import EditProfile from '../../services/customer_services/EditProfileCustomer';
 
+
 export default function Profile() {
   return (
     <>

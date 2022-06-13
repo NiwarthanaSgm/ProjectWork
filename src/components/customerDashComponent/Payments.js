@@ -5,6 +5,7 @@ import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import '../../styles/earnings.css';
 
+
 const styleAdded ={
   card:{
     width: '200px', margin:'5px',

@@ -5,7 +5,6 @@ import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import '../../styles/userbox.css';
 
-
 export default function UserBox() {
   const name= 'ABCD';
   return (

@@ -3,7 +3,7 @@ import IconButton from '@mui/material/IconButton';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Avatar from '@mui/material/Avatar';
-import { useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom'; 
 
 export default function BasicMenu() {
   const name = 'ABCD';

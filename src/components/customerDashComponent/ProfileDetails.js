@@ -37,6 +37,7 @@ export default function Profile() {
   };
 
   const name = 'ABCD', country= 'Sri Lanka', city='Colombo';
+  
   return (
     <div className='content'>
       <Box width={'100%'} height={'auto'} sx={{backgroundColor:'rgb(235, 227, 227)', padding:'2% 2% 2% 5%', minWidth:'350px', maxWidth:'500px', marginRight:2}}>

@@ -1,7 +1,7 @@
-import React from 'react'
-import Navbar from '../../components/SP_DashboardComponent/Navbar'
-import ProfileDetails from '../../components/SP_DashboardComponent/ProfileDetails'
-import EditProfile from '../../services/SP_services/EditProfile'
+import React from 'react';
+import Navbar from '../../components/SP_DashboardComponent/Navbar';
+import ProfileDetails from '../../components/SP_DashboardComponent/ProfileDetails';
+import EditProfile from '../../services/SP_services/EditProfile';
 
 export default function Profile() {
   return (

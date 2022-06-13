@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { NotificationsNone, Language, Settings, Home } from '@mui/icons-material';
 import Tooltip from '@mui/material/Tooltip';
-import IconMenu from './IconMenu';
+import IconMenu from './IconMenu'; 
 import '../../styles/navbar.css';
 
 export default function Navbar() {
