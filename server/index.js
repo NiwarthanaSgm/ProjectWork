@@ -6,12 +6,12 @@ const db = mysql.createPool({
     host: 'localhost',
     user: 'root',
     password: 'password',
-    database: 'doodus_db',
+    database: 'project_db',
 });
 
 app.get("/", (req, res) => {
 
-    const sqlInsert = "INSERT INTO catogery (Catogery_Id, CatogeryName, CreatedAt) VALUES (10, 'law', 8);"
+    const sqlInsert = "INSERT INTO catogery (CatogeryName, CreatedAt) VALUES ('Designer', 'cc1');"
     db.query(sqlInsert, (err, result)=>{
         res.send("NIWARTHANA SANDEEPANI");
     })
