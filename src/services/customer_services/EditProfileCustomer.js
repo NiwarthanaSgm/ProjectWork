@@ -10,9 +10,6 @@ export default function EditProfile() {
   const [firstname, setfirstname] = useState("");
   const [lastname, setLastname] = useState("");
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  // };
 
   const editDetails = () => {
     Axios.post('http://localhost:3002/create', {
@@ -22,6 +19,12 @@ export default function EditProfile() {
       console.log("success");
     });
   };
+
+  const showDetails = () => {
+    Axios.get('http://localhost:3002/getData').then((response) => {
+      console.log(response);
+    })
+  }
 
   return (
     <>
@@ -91,6 +94,7 @@ export default function EditProfile() {
                 label="Save"
               /> */}
               <Button onClick={editDetails}>Update</Button>
+              <Button onClick={showDetails}>Show</Button>
           </form>
         </div>  
       </Box>

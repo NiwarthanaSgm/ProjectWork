@@ -39,6 +39,16 @@ app.post("/create", (req, res) => {
     );
 });
 
+app.get('/getData', (req, res) => {
+  db.query("SELECT* FROM customer WHERE CustomerID = 'c1'", (err, result) => {
+    if(err){
+      console.log(err);
+  } else{
+      res.send(result);
+  }
+  })
+})
+
 app.listen(3002, () => {
     console.log("running backend on port 3002");
 });
