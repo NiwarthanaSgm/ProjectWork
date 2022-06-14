@@ -12,7 +12,7 @@ export default function EditProfile() {
 
 
   const editDetails = () => {
-    Axios.post('http://localhost:3002/create', {
+    Axios.post('http://localhost:3002/editCustomer', {
       cname : firstname, 
       Adname : lastname
     }).then(() => {
@@ -56,7 +56,7 @@ export default function EditProfile() {
             <TextField
               id="standard-required"
               label="First Name"
-              defaultValue="ABCD"
+              placeholder="ABCD"
               variant="standard"
               onChange={(event) => {
                 setfirstname(event.target.value);
@@ -65,7 +65,7 @@ export default function EditProfile() {
             <TextField
               id="standard-required"
               label="Last Name"
-              defaultValue="EFGH"
+              placeholder="EFGH"
               variant="standard"
               onChange={(event) => {
                 setLastname(event.target.value);
@@ -93,7 +93,7 @@ export default function EditProfile() {
                 name="Save"
                 label="Save"
               /> */}
-              <Button onClick={editDetails}>Update</Button>
+              <Button onClick={editDetails} color='success' variant='contained'>Update</Button>
           </form>
         </div>  
       </Box>

@@ -23,11 +23,27 @@ const db = mysql.createConnection({
 //     })
 // });
 
-app.post("/create", (req, res) => {
+app.post("/editCustomer", (req, res) => {
     const cname = req.body.cname
     const Adname = req.body.Adname
 
     db.query ('UPDATE Customer SET FirstName = ?, LastName = ? WHERE CustomerID ="c1"', 
+    [cname, Adname], 
+    (err, result) =>{
+        if(err){
+            console.log(err);
+        } else{
+            res.send("values sent");
+        }
+      }
+    );
+});
+
+app.post("/editServiceprovider", (req, res) => {
+    const cname = req.body.cname
+    const Adname = req.body.Adname
+
+    db.query ('UPDATE ServiceProvider SET FirstName = ?, LastName = ? WHERE SPID ="s1"', 
     [cname, Adname], 
     (err, result) =>{
         if(err){

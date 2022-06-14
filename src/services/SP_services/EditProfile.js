@@ -2,8 +2,24 @@ import { React, useState } from "react";
 import {Box,Avatar,Button,Collapse,Divider,List,ListItem,TextField,Checkbox} from "@mui/material";
 import {GitHub,Facebook,Instagram,Publish,Edit} from "@mui/icons-material";
 import AddIcon from '@mui/icons-material/Add';
+import Axios from 'axios';
 
 export default function EditProfile() {
+
+  // Edited details're sent to database
+  // const [prflPic, setprflPic] = useState("");
+  const [firstname, setfirstname] = useState("");
+  const [lastname, setLastname] = useState("");
+
+
+  const editDetails = () => {
+    Axios.post('http://localhost:3002/editServiceprovider', {
+      cname : firstname, 
+      Adname : lastname
+    }).then(() => {
+      console.log("success");
+    });
+  };
   const style = {
     display: "inline-flex",
     justifyContent: "space-between",
@@ -65,14 +81,20 @@ export default function EditProfile() {
             <TextField
               id="standard-required"
               label="First Name"
-              defaultValue="ABCD"
+              placeholder="ABCD"
               variant="standard"
+              onChange={(event) => {
+                setfirstname(event.target.value);
+              }}
             />
             <TextField
               id="standard-required"
               label="Last Name"
-              defaultValue="EFGH"
+              placeholder="EFGH"
               variant="standard"
+              onChange={(event) => {
+                setLastname(event.target.value);
+              }}
             />
             <TextField
               disabled
@@ -156,13 +178,7 @@ export default function EditProfile() {
                 </ListItem>
                 <Divider />
               </List>
-              <input
-                type="submit"
-                color="success"
-                size="large"
-                name="Save"
-                label="Save"
-              />
+              <Button onClick={editDetails} color='success' variant='contained'>Update</Button>
             </div>
           </form>
         </div>
