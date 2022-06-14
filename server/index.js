@@ -27,7 +27,7 @@ app.post("/create", (req, res) => {
     const cname = req.body.cname
     const Adname = req.body.Adname
 
-    db.query ('INSERT INTO catogery (CatogeryName, CreatedAt) VALUES (?, ?)', 
+    db.query ('UPDATE Customer SET FirstName = ?, LastName = ? WHERE CustomerID ="c1"', 
     [cname, Adname], 
     (err, result) =>{
         if(err){

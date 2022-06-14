@@ -20,11 +20,11 @@ export default function EditProfile() {
     });
   };
 
-  const showDetails = () => {
-    Axios.get('http://localhost:3002/getData').then((response) => {
-      console.log(response);
-    })
-  }
+  // const showDetails = () => {
+  //   Axios.get('http://localhost:3002/getData').then((response) => {
+  //     console.log(response);
+  //   })
+  // }
 
   return (
     <>
@@ -94,7 +94,6 @@ export default function EditProfile() {
                 label="Save"
               /> */}
               <Button onClick={editDetails}>Update</Button>
-              <Button onClick={showDetails}>Show</Button>
           </form>
         </div>  
       </Box>
