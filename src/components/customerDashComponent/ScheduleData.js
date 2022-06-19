@@ -7,7 +7,7 @@ export default function schedulesTable() {
   const columns = [
     { field: 'Date', headerName: 'Date', width: 150 },
     { field: 'Time', headerName: 'Time', width: 150 },
-    { field: 'Client', headerName: 'Client Name', width: 200 },
+    { field: 'Client', headerName: 'Expert Name', width: 200 },
     { field: 'Duration', headerName:'Duration', width: 180 },
   ];
 

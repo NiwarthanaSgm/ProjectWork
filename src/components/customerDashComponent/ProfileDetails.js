@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Box, Avatar, Typography, Button } from '@mui/material';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import MailIcon from '@mui/icons-material/Mail';
@@ -35,6 +35,10 @@ export default function Profile() {
       paddingRight:20,
     },
   };
+
+  // const [firstname, setfirstname] = useState("");
+
+
 
   const name = 'ABCD', country= 'Sri Lanka', city='Colombo';
   
