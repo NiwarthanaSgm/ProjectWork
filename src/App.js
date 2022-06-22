@@ -8,6 +8,7 @@ import Home from './Pages/Home';
 import CustomerDashboard from './Pages/customer_pages/CustomerDashboard';
 import CustomerEditProfile from './Pages/customer_pages/CusFullProfile';
 import CustomerProfile from './Pages/customer_pages/CustomerProfile';
+import createGig from './components/SP_DashboardComponent/createGig';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             <Route path="/dashboard/customer"><CustomerDashboard/></Route>
             <Route path="/customer/EditProfile"><CustomerEditProfile/></Route>
             <Route path="/customer/profile"><CustomerProfile/></Route> 
+            <Route path={"/create Gig"} exact component={createGig} />
           </Switch></div>
       </Router>
     </>

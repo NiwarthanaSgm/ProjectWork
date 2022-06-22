@@ -9,22 +9,24 @@ export default function EditProfile() {
   // const [prflPic, setprflPic] = useState("");
   const [firstname, setfirstname] = useState("");
   const [lastname, setLastname] = useState("");
+  // const [list, setList] = useState([]);
 
 
   const editDetails = () => {
-    Axios.post('http://localhost:3002/editCustomer', {
-      cname : firstname, 
-      Adname : lastname
+    Axios.put('http://localhost:3002/update/Customer', {
+      firstname : firstname, 
+      lastname : lastname
     }).then(() => {
       console.log("success");
     });
   };
 
-  // const showDetails = () => {
-  //   Axios.get('http://localhost:3002/getData').then((response) => {
-  //     console.log(response);
-  //   })
-  // }
+  // const getData = () => {
+  //   Axios.get("http://localhost:3002/getData").then((response) => {
+  //     setList(response.data);
+  //   });
+  // };
+
 
   return (
     <>
@@ -86,15 +88,18 @@ export default function EditProfile() {
               variant="standard"
             />
             <br />
-              {/* <input
-                type="submit"
-                color="success"
-                size="large"
-                name="Save"
-                label="Save"
-              /> */}
               <Button onClick={editDetails} color='success' variant='contained'>Update</Button>
           </form>
+          {/* <Button onClick={getData}>Show</Button>
+          
+          {list.map((val, key) => {
+              return( 
+              <div> 
+                {val.firstname} 
+              </div>
+
+            );
+      })} */}
         </div>  
       </Box>
     </>

@@ -23,23 +23,23 @@ const db = mysql.createConnection({
 //     })
 // });
 
-app.post("/editCustomer", (req, res) => {
-    const cname = req.body.cname
-    const Adname = req.body.Adname
-
-    db.query ('UPDATE Customer SET FirstName = ?, LastName = ? WHERE CustomerID ="c1"', 
-    [cname, Adname], 
-    (err, result) =>{
+app.put("/update/Customer", (req, res) => {
+    const fname = req.body.firstname;
+    const lname = req.body.lastname;
+    
+    db.query ("UPDATE Customer SET FirstName = ?, LastName = ? WHERE CustomerID ='c1'", 
+    [fname, lname], 
+    (err, result) => {
         if(err){
             console.log(err);
         } else{
-            res.send("values sent");
+            res.send(result);
         }
       }
     );
 });
 
-app.post("/editServiceprovider", (req, res) => {
+app.put("/update/Serviceprovider/:id", (req, res) => {
     const cname = req.body.cname
     const Adname = req.body.Adname
 
@@ -56,6 +56,8 @@ app.post("/editServiceprovider", (req, res) => {
 });
 
 app.get('/getData', (req, res) => {
+
+    // const id = req.params.id
   db.query("SELECT* FROM customer WHERE CustomerID = 'c1'", (err, result) => {
     if(err){
       console.log(err);
@@ -65,6 +67,6 @@ app.get('/getData', (req, res) => {
   })
 })
 
-app.listen(3002, () => {
-    console.log("running backend on port 3002");
+app.listen(3005, () => {
+    console.log("running backend on port 3005");
 });

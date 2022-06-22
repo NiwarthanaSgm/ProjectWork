@@ -62,8 +62,8 @@ export default function EditProfile() {
           borderColor: "lightgreen",
           borderRadius: "10px",
         }}
-        noValidate
-        autoComplete="off"
+        Validate
+        autoComplete="on"
       >
         <div style={{ width: "100%", padding: "0px 10px 10px 10px" }}>
           <h2>Change Your Details</h2>

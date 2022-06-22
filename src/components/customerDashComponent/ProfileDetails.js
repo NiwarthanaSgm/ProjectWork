@@ -38,7 +38,16 @@ export default function Profile() {
 
   // const [firstname, setfirstname] = useState("");
 
-
+//   async function getCustomerData(){
+//     const res = await apiService.CustomerDetails.fetchCustomerDetails();
+    
+//     if (res.status === 200){
+//       setDetails(res.data);
+//     }
+// } console.log(details)
+// useEffect(()=> {
+//   getCustomerData() 
+// }, [] )
 
   const name = 'ABCD', country= 'Sri Lanka', city='Colombo';
   

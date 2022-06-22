@@ -1,11 +1,25 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Avatar, Button } from '@mui/material';
 import {Typography} from '@mui/material';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import '../../styles/userbox.css';
+import apiService from '../../api/apiService';
 
 export default function UserBox() {
+
+  const [details , setDetails] = useState([]);
+    async function getCustomerData(){
+        const res = await apiService.CustomerDetails.fetchCustomerDetails();
+        
+        if (res.status === 200){
+          setDetails(res.data);
+        }
+    } console.log(details)
+    useEffect(()=> {
+      getCustomerData() 
+    }, [] )
+
   const name= 'ABCD';
   return (
     <><div className='bar'><div className='prof'>
@@ -31,6 +45,7 @@ export default function UserBox() {
         </ListItem>
       </List>
     </div>
-    </div></>
+    </div>
+    </>
   );
 }

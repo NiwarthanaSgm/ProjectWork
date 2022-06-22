@@ -83,7 +83,7 @@ export default function UserBox() {
              1 <Box width={getOneStars()} sx={{backgroundColor: 'red'}} style={styleAdded.text}/>
         </Typography><Typography style={styleAdded.count}>(1)</Typography>
       </Box>
-      <Button href="/create Gig"><AddCircleIcon/>Add Gig</Button>
+      <Button href="/create Gig" style={{margin:'20px'}}><AddCircleIcon/>Add Gig</Button>
     </div>
     </div></>
   );
